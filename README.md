@@ -168,7 +168,7 @@ cp -r ~/Documents/EFI /Volumes/EFI/
 
 <h1>Troubleshooting Problems I had to figure out how to fix:</h1>
 
-Kernal Panic during installation:
+<h2>Kernal Panic during installation:</h2>
 
 I got a fatal panic message that roughly says:
 
@@ -177,14 +177,14 @@ I got a fatal panic message that roughly says:
 It took awhile to realize that the message told me literally what the problem is, which is that the m2 nvme hard drive I bought, SK Hynix P31 Gold, DOESNT WORK with hackintoshes.  To fix, I had to remove this m2 drive from my computer and just install OSX on a SSD I had.
 
 
-Error messaging during installation process:
+<h2>Error messaging during installation process:</h2>
 
 "Failed to parse data field as blob with type boolean"
 
 I figured out that this is a mistake I made when I was working on config.plist in step 7.  This is why its really important to get the config.plist correct and modifying the fields correctly and verifying ProperTree can open your config.plist without problems before you copy it over to the USB partition.
 
 
-No internet during installation or afterwards with Intel® I225-V 2.5Gb Ethernet:
+<h2>No internet during installation or afterwards with Intel® I225-V 2.5Gb Ethernet:</h2>
 
 When installing oSX, it will check if it can use DHCP to get an ip address / connect to the internet.  I had what I thought was the correct ktexts to get me internet, specifically:
 
