@@ -7,6 +7,7 @@ https://github.com/yilmazca/intel-i9-10900K-Asus-prime-Z490A-hackintosh
 
 
 <h2>Hardware:</h2>
+
 - ASUS PRIME Z490-A LGA 1200
 - Intel Core i7-10700K Comet Lake
 - Team T-FORCE VULCAN Z 32GB
@@ -50,6 +51,7 @@ If you literally clone this repo and add the EFI folder into your USB, you will 
 Steps I took, essentially starting from scratch:
 </h1>
 tl;dr
+
 - make usb installer stick
 - create EFI folder with SSDT and ktexts
 - Create config.plist
