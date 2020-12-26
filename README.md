@@ -81,6 +81,7 @@ https://dortania.github.io/OpenCore-Install-Guide/config.plist/#amd
 The config.plist is VERY important and links everything together.
 
 7:  After we have our base config.plist, I use the Comet Lake guide, in step 4, which tells you to use ProperTree to load your SSDT's / Ktexts into your newly created config.plist.  The guide will then ask you to modify specific entries inside config.plist , which I followed.
+
 NOTE:  I have a visual disability, and ProperTree by default has a white background which makes it hard for me to see / read.  I was able to load the SSDT and ktexts and then save config.plist  Afterwards, I used VSCode to actually make my edits based on the guide.  Lastly, when I was done making my edits in VSCode, I opened up config.plist one last time in ProperTree to make sure it CAN open the file without errors.  This is because I originally used nano, the terminal text editor, to make my changes, but nano actually screwed up the config.plist formatting which gave me errors when I was installing OSX.
 
 8:  Use GenSMBIOS to add information to your config.plist , more information on how to use it is in the guide from step 4.
