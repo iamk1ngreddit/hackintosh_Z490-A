@@ -118,7 +118,9 @@ Bios Settings
 IMPORTANT NOTE:  THE iGPU is specifically called: DVMT Pre-Allocated
 Here's how to get to the IGPU setting:
 Advanced Mode -> Advanced Tab
+
 Sysrem Agwnt (SA) Configuration -> Graphics Configuration
+
 DVMT Pre-Allocated -> 64M
 
 
