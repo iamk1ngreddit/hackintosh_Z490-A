@@ -69,7 +69,7 @@ https://dortania.github.io/OpenCore-Install-Guide/installer-guide/opencore-efi.h
 
 tl;dr - the guide above will take the EFI folder in the OpenCore Release and clean it up, as this EFI folder is needed for both the usb installer and after the installation.
 
-4:  Get your SSDT, this is CPU specific, meaning if you are not running Comet Lake / 10th gen Intel, then you need to find the correct guide to figure out which SDST's you need.  Guide I used for Comet Lake SDST:
+4:  Get your SSDT, this is CPU specific, meaning if you are not running Comet Lake / 10th gen Intel, then you need to find the correct guide to figure out which SSDT's you need.  Guide I used for Comet Lake SSDT:
 https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#starting-point
 
 5:  Get Ktexts:
@@ -80,8 +80,8 @@ https://dortania.github.io/OpenCore-Install-Guide/config.plist/#amd
 
 The config.plist is VERY important and links everything together.
 
-7:  After we have our base config.plist, I use the Comet Lake guide, in step 4, which tells you to use ProperTree to load your SDST's / Ktexts into your newly created config.plist.  The guide will then ask you to modify specific entries inside config.plist , which I followed.
-NOTE:  I have a visual disability, and ProperTree by default has a white background which makes it hard for me to see / read.  I was able to load the SDST and ktexts and then save config.plist  Afterwards, I used VSCode to actually make my edits based on the guide.  Lastly, when I was done making my edits in VSCode, I opened up config.plist one last time in ProperTree to make sure it CAN open the file without errors.  This is because I originally used nano, the terminal text editor, to make my changes, but nano actually screwed up the config.plist formatting which gave me errors when I was installing OSX.
+7:  After we have our base config.plist, I use the Comet Lake guide, in step 4, which tells you to use ProperTree to load your SSDT's / Ktexts into your newly created config.plist.  The guide will then ask you to modify specific entries inside config.plist , which I followed.
+NOTE:  I have a visual disability, and ProperTree by default has a white background which makes it hard for me to see / read.  I was able to load the SSDT and ktexts and then save config.plist  Afterwards, I used VSCode to actually make my edits based on the guide.  Lastly, when I was done making my edits in VSCode, I opened up config.plist one last time in ProperTree to make sure it CAN open the file without errors.  This is because I originally used nano, the terminal text editor, to make my changes, but nano actually screwed up the config.plist formatting which gave me errors when I was installing OSX.
 
 8:  Use GenSMBIOS to add information to your config.plist , more information on how to use it is in the guide from step 4.
 NOTE:  GenSMBIOS is important because it allows you to use AppleID in OSX as well as properly tailor your CPU information (iMac 2,1) to your hackintosh.
@@ -138,7 +138,7 @@ etc
 
 By Default, in 5 seconds it'll go straight to #1 and begin the Big Sur installation
 
-16:  Follow the OSX Installer instructions, ie format your HD, set language, location / time, create username, etc.  Everything should work, including internet, without a problem if you use my EFI folder and adding your GenSMBIOS information from step 8.
+16:  Follow the OSX Installer instructions, ie format your HD, set language, location / time, create username, etc.
 
 17:  After the installation is done and you are now in Big Sur, there is one more important thing.  If you eject the USB and restart your computer, you will find that you CANNOT boot into Big Sur, even though you installed it.  This is because installing Big Sur did not install any EFI / boot parameterss.
 To fix this, we will first download MountEFI again.
@@ -166,6 +166,7 @@ cp -r ~/Documents/EFI /Volumes/EFI/
 
 
 <h1>Troubleshooting Problems I had to figure out how to fix:</h1>
+
 Kernal Panic during installation:
 I got a fatal panic message that roughly says:
 'nvme: "Fatal error occurred. CSTS=0x0'
