@@ -22,9 +22,11 @@ I'm using the iGPU via the i7 and mobo, connecting my monitor via the DisplayPor
 <h2>Working:</h2>
 Graphics, Internet, Sound, AppleID, OS Updates
 
+
 Did not check:
-Sleep / Wake - I'm on the computer most of the time, so I never need to sleep it.
-HDMI port
+- Sleep / Wake - I'm on the computer most of the time, so I never need to sleep it.
+
+- HDMI port
 
 
 <h2>Tools I used:</h2>
