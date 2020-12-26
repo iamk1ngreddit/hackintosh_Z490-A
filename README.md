@@ -195,14 +195,8 @@ FakePCIID.kext
 It turns out we need to make sure we have not only these ktexts, but that our config.plist references our motherboard devices properly.
 In config.plist there is a section "DeviceProperties".
 Inside that section, in the Add area, we are suppose to copy over our motherboard device details.  From what I can tell, the basic device is ethernet, sound and something else that i'm not too sure of.  But specifically, if we don't have an entry for
+
 PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)
+
 We don't have internet, even if we have the ktexts.
-
-
-
-
-
-
-
-
 
