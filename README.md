@@ -1,0 +1,1 @@
+# hackintosh_Z490-A
