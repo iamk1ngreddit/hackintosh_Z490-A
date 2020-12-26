@@ -33,6 +33,7 @@ Did not check:
 gibMacOS
 https://github.com/corpnewt/gibMacOS
 
+
 ProperTree
 https://github.com/corpnewt/ProperTree
 
@@ -45,9 +46,7 @@ https://github.com/corpnewt/MountEFI
 VS Code - Used as a text editor
 
 
-<h2>
-If you literally clone this repo and add the EFI folder into your USB, you will be able to do a clean install of Big Sur as long as your hardware matches mine and are only using the iGPU.  If you want AppleID to work, you will need to add the GenSMBIOS to config.plist found below.
-</h2>
+
 
 <h1>
 Steps I took, essentially starting from scratch:
