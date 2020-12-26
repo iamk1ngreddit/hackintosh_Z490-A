@@ -6,7 +6,7 @@ Special Thanks to yilmazca, without his initial Guide, this would have been 100x
 https://github.com/yilmazca/intel-i9-10900K-Asus-prime-Z490A-hackintosh
 
 
-Hardware:
+<h2>Hardware:</h2>
 - ASUS PRIME Z490-A LGA 1200
 - Intel Core i7-10700K Comet Lake
 - Team T-FORCE VULCAN Z 32GB
@@ -18,7 +18,7 @@ Not working Hardware that made me sad:
 
 I'm using the iGPU via the i7 and mobo, connecting my monitor via the DisplayPort connector.
 
-Working:
+<h2>Working:</h2>
 Graphics, Internet, Sound, AppleID, OS Updates
 
 Did not check:
@@ -26,7 +26,7 @@ Sleep / Wake - I'm on the computer most of the time, so I never need to sleep it
 HDMI port
 
 
-Tools I used:
+<h2>Tools I used:</h2>
 gibMacOS
 https://github.com/corpnewt/gibMacOS
 
@@ -42,9 +42,13 @@ https://github.com/corpnewt/MountEFI
 VS Code - Used as a text editor
 
 
+<h2>
 If you literally clone this repo and add the EFI folder into your USB, you will be able to do a clean install of Big Sur as long as your hardware matches mine and are only using the iGPU.  If you want AppleID to work, you will need to add the GenSMBIOS to config.plist found below.
+</h2>
 
+<h1>
 Steps I took, essentially starting from scratch:
+</h1>
 tl;dr
 - make usb installer stick
 - create EFI folder with SSDT and ktexts
@@ -156,7 +160,7 @@ cp -r ~/Documents/EFI /Volumes/EFI/
 
 
 
-Problems I had to figure out how to fix:
+<h1>Troubleshooting Problems I had to figure out how to fix:</h1>
 Kernal Panic during installation:
 I got a fatal panic message that roughly says:
 'nvme: "Fatal error occurred. CSTS=0x0'
