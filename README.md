@@ -169,18 +169,29 @@ cp -r ~/Documents/EFI /Volumes/EFI/
 <h1>Troubleshooting Problems I had to figure out how to fix:</h1>
 
 Kernal Panic during installation:
+
 I got a fatal panic message that roughly says:
+
 'nvme: "Fatal error occurred. CSTS=0x0'
+
 It took awhile to realize that the message told me literally what the problem is, which is that the m2 nvme hard drive I bought, SK Hynix P31 Gold, DOESNT WORK with hackintoshes.  To fix, I had to remove this m2 drive from my computer and just install OSX on a SSD I had.
 
+
 Error messaging during installation process:
+
 "Failed to parse data field as blob with type boolean"
+
 I figured out that this is a mistake I made when I was working on config.plist in step 7.  This is why its really important to get the config.plist correct and modifying the fields correctly and verifying ProperTree can open your config.plist without problems before you copy it over to the USB partition.
 
+
 No internet during installation or afterwards with Intel® I225-V 2.5Gb Ethernet:
+
 When installing oSX, it will check if it can use DHCP to get an ip address / connect to the internet.  I had what I thought was the correct ktexts to get me internet, specifically:
+
 FakePCIID_Intel_I225-V.kext
+
 FakePCIID.kext
+
 It turns out we need to make sure we have not only these ktexts, but that our config.plist references our motherboard devices properly.
 In config.plist there is a section "DeviceProperties".
 Inside that section, in the Add area, we are suppose to copy over our motherboard device details.  From what I can tell, the basic device is ethernet, sound and something else that i'm not too sure of.  But specifically, if we don't have an entry for
